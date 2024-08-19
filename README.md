@@ -18,9 +18,8 @@
 - Then run Usage.py under CV model folder hollistic model
 
 
-Contributors
-
-meet.kachhadiya@mytum.de - Meet Kachhadiya
-robin.schukrafft@tum.de - Robin Schukrafft
-Sauhard.dubey@tum.de - Sauhard Dubey
-toshini.iyer@tum.de - Toshini Iyer
+%Contributors
+- meet.kachhadiya@mytum.de - Meet Kachhadiya
+- robin.schukrafft@tum.de - Robin Schukrafft
+- Sauhard.dubey@tum.de - Sauhard Dubey
+- toshini.iyer@tum.de - Toshini Iyer
