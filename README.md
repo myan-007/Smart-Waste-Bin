@@ -16,3 +16,11 @@
 - Check the requirement.txt file add all those Libraries to virtual environment
 - Run the individual file from the Code Folder for testing the each sensor individually
 - Then run Usage.py under CV model folder hollistic model
+
+
+Contributors
+
+meet.kachhadiya@mytum.de - Meet Kachhadiya
+robin.schukrafft@tum.de - Robin Schukrafft
+Sauhard.dubey@tum.de - Sauhard Dubey
+toshini.iyer@tum.de - Toshini Iyer
