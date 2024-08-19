@@ -1,4 +1,3 @@
- 
 import torch
 from torchvision import models, transforms
 from torch import nn
@@ -111,18 +110,16 @@ def runServo(perdiction):
 
     while(True):
         if(perdiction == "organic"):
-
             sleep(3)
             servo1.angle = -35
-            print(" servo1.angle = -45")
             sleep(3)
             servo1.angle = -0
-            print(" servo1.angle = 0")
             sleep(3)
             servo1.detach()
             
         else:
             ind_sensor = DigitalInputDevice(27)
+            print("Inductive Sensor Initialized")
             print(ind_sensor)
         
             servo1.angle = 15
@@ -136,8 +133,8 @@ def runServo(perdiction):
             
             flag = 0
             while time() - startTime <= 5:
-                # print("Inductive sensor value ",ind_sensor.value)
                 if ind_sensor.value == 0:
+                    print("Metal Detected")
                     servo2.angle = 35
                     sleep(3)
                     flag = 1
@@ -150,26 +147,9 @@ def runServo(perdiction):
             
             servo1.detach()
             servo2.detach()
-        break
-
-    '''
-    sleep(2)
-    servo1.angle = 0
-    sleep(2)
-    if prediction == "organic":
-        print(" servo1.angle = -45")
-        servo1.angle = -45
-        sleep(2)captured_imag
-    else:
-        print(" servo1.angle = 45")
-        servo1.angle = 45
-        sleep(2)     
-        print(" servo1.angle = 0")
-        servo1.angle= 0
-    '''
-
-
-
+            print("Servos Detached")
+            print("Ready to use again")
+    break
  
 if __name__ == "__main__":
     while True:
@@ -187,9 +167,9 @@ if __name__ == "__main__":
         print("camera captured")
         plt.imshow(captured_image)
         plt.axis('off')
-        plt.show()
+        # plt.show()
         prediction = predict_image(captured_image)
-        print(prediction)
+        print("CV model : ",prediction)
         runServo(prediction)
         # Ask the user if they want to capture another image
         # user_input = input("Capture another image? (y/n): ")
